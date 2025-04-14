@@ -82,7 +82,17 @@ fun Calc_Screen (navController: NavController) {
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        OutlinedButton(onClick = {/*TODO*/},
+        OutlinedButton(onClick = {
+            val myfirstnum= firstnum.text.trim()  //converts number to text
+            val mysecondnum= secondnum.text.trim()  //converts number to text
+            if (myfirstnum.isEmpty() || mysecondnum.isEmpty()){ // || means or
+                answer= "Please fill in all details"
+            } else{
+                val myanswer = myfirstnum.toDouble()-mysecondnum.toDouble()
+                answer=myanswer.toString()
+            }
+
+        },
             modifier = Modifier.width(300.dp),
             colors = ButtonDefaults.buttonColors(Color.Green),
             shape = RoundedCornerShape(16.dp)
@@ -92,7 +102,17 @@ fun Calc_Screen (navController: NavController) {
         }
         Spacer(modifier = Modifier.height(20.dp))
 
-        OutlinedButton(onClick = {/*TODO*/},
+        OutlinedButton(onClick = {
+            val myfirstnum= firstnum.text.trim()  //converts number to text
+            val mysecondnum= secondnum.text.trim()  //converts number to text
+            if (myfirstnum.isEmpty() || mysecondnum.isEmpty()){ // || means or
+                answer= "Please fill in all details"
+            } else{
+                val myanswer = myfirstnum.toDouble()*mysecondnum.toDouble()
+                answer=myanswer.toString()
+            }
+
+        },
             modifier = Modifier.width(300.dp),
             colors = ButtonDefaults.buttonColors(Color.Green),
             shape = RoundedCornerShape(16.dp)
@@ -102,7 +122,17 @@ fun Calc_Screen (navController: NavController) {
         }
         Spacer(modifier = Modifier.height(20.dp))
 
-        OutlinedButton(onClick = {/*TODO*/},
+        OutlinedButton(onClick = {
+            val myfirstnum= firstnum.text.trim()  //converts number to text
+            val mysecondnum= secondnum.text.trim()  //converts number to text
+            if (myfirstnum.isEmpty() || mysecondnum.isEmpty()){ // || means or
+                answer= "Please fill in all details"
+            } else{
+                val myanswer = myfirstnum.toDouble()/mysecondnum.toDouble()
+                answer=myanswer.toString()
+            }
+
+        },
             modifier = Modifier.width(300.dp),
             colors = ButtonDefaults.buttonColors(Color.Green),
             shape = RoundedCornerShape(16.dp)
